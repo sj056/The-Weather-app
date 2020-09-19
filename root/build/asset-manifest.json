@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/mosam/static/css/main.7e680d9a.chunk.css",
+    "main.js": "/mosam/static/js/main.6f0030d8.chunk.js",
+    "main.js.map": "/mosam/static/js/main.6f0030d8.chunk.js.map",
+    "runtime-main.js": "/mosam/static/js/runtime-main.8da41a53.js",
+    "runtime-main.js.map": "/mosam/static/js/runtime-main.8da41a53.js.map",
+    "static/css/2.3fa91bfe.chunk.css": "/mosam/static/css/2.3fa91bfe.chunk.css",
+    "static/js/2.bca5abe4.chunk.js": "/mosam/static/js/2.bca5abe4.chunk.js",
+    "static/js/2.bca5abe4.chunk.js.map": "/mosam/static/js/2.bca5abe4.chunk.js.map",
+    "index.html": "/mosam/index.html",
+    "precache-manifest.1581d6f81c8147fb9adaca569d6cfd75.js": "/mosam/precache-manifest.1581d6f81c8147fb9adaca569d6cfd75.js",
+    "service-worker.js": "/mosam/service-worker.js",
+    "static/css/2.3fa91bfe.chunk.css.map": "/mosam/static/css/2.3fa91bfe.chunk.css.map",
+    "static/css/main.7e680d9a.chunk.css.map": "/mosam/static/css/main.7e680d9a.chunk.css.map",
+    "static/js/2.bca5abe4.chunk.js.LICENSE.txt": "/mosam/static/js/2.bca5abe4.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/mosam/static/media/thunderstorm.2f455d92.jpg",
+    "static/media/weather-icons.css": "/mosam/static/media/weathericons-regular-webfont.ed0943f2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8da41a53.js",
+    "static/css/2.3fa91bfe.chunk.css",
+    "static/js/2.bca5abe4.chunk.js",
+    "static/css/main.7e680d9a.chunk.css",
+    "static/js/main.6f0030d8.chunk.js"
+  ]
+}

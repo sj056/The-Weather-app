@@ -20,7 +20,8 @@ class App extends React.Component{
       temp_max:undefined,
       temp_min:undefined,
       desc:"",
-      error:false,   
+      error:false,
+      background:""   
      };
      
     this.icon={
@@ -44,28 +45,28 @@ class App extends React.Component{
   get_weathericon(icon,rangeid){
     switch(true){
       case rangeid>=200&&rangeid<=232:
-        this.setState({icon:this.icon.Thunderstorm});
+        this.setState({icon:this.icon.Thunderstorm , background:"thunderstorm" });
         break;
       case rangeid>=300&&rangeid<=321:
-        this.setState({icon:this.icon.Drizzle});
+        this.setState({icon:this.icon.Drizzle , background:"drizzle"});
        break;
       case rangeid>=500&&rangeid<=531:
-        this.setState({icon:this.icon.Rain});
+        this.setState({icon:this.icon.Rain , background:"rain"});
         break;
       case rangeid>=600&&rangeid<=622:
-        this.setState({icon:this.icon.Snow});
+        this.setState({icon:this.icon.Snow , background:"snow"});
         break;        
       case rangeid>=701&&rangeid<=781:
-        this.setState({icon:this.icon.Atmosphere});
+        this.setState({icon:this.icon.Atmosphere , background:"atmosphere"});
         break;    
       case rangeid===800:
-        this.setState({icon:this.icon.Clear});
+        this.setState({icon:this.icon.Clear , background:"clear"});
         break;
       case rangeid>=801&&rangeid<=804:
-        this.setState({icon:this.icon.Clouds});
+        this.setState({icon:this.icon.Clouds , background:"clouds"});
         break;
       default:
-        this.setState({icon:this.icon.Clouds});
+        this.setState({icon:this.icon.Clouds , background:"clouds"});
 
     }
   }
@@ -101,12 +102,14 @@ class App extends React.Component{
   return `${date} ${month} ${year}`
 }
 render()
- {
+ {  
+  
     return(
     <div className="App">
      <Form loadmosam={this.getweather} error={this.state.error} date={this.dateBuilder(new Date())}/>
+    
      <Mosam city={this.state.city} country={this.state.country} temp_celsius={this.state.celsius} temp_max={this.state.temp_max} temp_min={this.state.temp_min} desc={this.state.desc}
-     icon={this.state.icon} />
+     icon={this.state.icon} background={this.state.background}/>
      </div> 
     );
   }

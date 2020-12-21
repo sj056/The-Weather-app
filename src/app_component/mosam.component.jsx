@@ -1,7 +1,50 @@
 import React from 'react';
+import atmosphere from './background/atmosphere.jpg';
+import clear from './background/clear.jpg';
+import clouds from './background/clouds.jpg';
+import drizzle from './background/drizzle.jpg';
+import rain from './background/rain.jpg';
+import snow from './background/snow.jpg';
+import thunderstorm from './background/thunderstorm.jpg';
 
 const Mosam =(props)=>{
+    {props.background=="atmosphere" ? (
+        document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+atmosphere+')'
+         ):
+         (<></>
+         )}
+    {props.background=="clear" ? (
+            document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clear+')'
+             ):
+    (<></>
+    )}
+    {props.background=="clouds" ? (
+        document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clouds+')'
+         ):
+         (<></>
+         )}
+    {props.background=="drizzle" ? (
+            document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+drizzle+')'
+             ):
+             (<></>
+             )}   
+    {props.background=="rain" ? (
+                document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+rain+')'
+                 ):
+                 (<></>
+                 )}
+    {props.background=="snow" ? (
+                    document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+snow+')'
+                     ):
+                     (<></>
+                     )}  
+    {props.background=="thunderstorm" ? (
+                        document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+thunderstorm+')'
+                         ):
+                         (<></>
+                         )}
         return(
+       
         <div className="container text-light">
             <div className="cards pt-4">
                 <h1 >

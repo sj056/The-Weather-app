@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-image: linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url("./assets/thunderstorm.jpg");
+  background-image: linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url("https://images.unsplash.com/photo-1591880871585-b8e25c579f95?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nzd8fHdlYXRoZXIlMjBjaXR5fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

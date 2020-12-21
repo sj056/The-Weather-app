@@ -6,7 +6,6 @@ import"weather-icons/css/weather-icons.css";
 import"bootstrap/dist/css/bootstrap.min.css";
 import Mosam from"./app_component/mosam.component";
 import Form from"./app_component/form.component";
-require('dotenv').config();
 const API_KEY = process.env.REACT_APP_API_KEY;
 class App extends React.Component{
   constructor(){

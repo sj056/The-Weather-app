@@ -7,42 +7,30 @@ import rain from './background/rain.jpg';
 import snow from './background/snow.jpg';
 import thunderstorm from './background/thunderstorm.jpg';
 
+
 const Mosam =(props)=>{
-    {props.background=="atmosphere" ? (
+    if(props.background=="atmosphere"){
         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+atmosphere+')'
-         ):
-         (<></>
-         )}
-    {props.background=="clear" ? (
-            document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clear+')'
-             ):
-    (<></>
-    )}
-    {props.background=="clouds" ? (
+    } 
+    if(props.background=="clear"){
+        document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clear+')'
+    } 
+    if(props.background=="clouds"){
         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clouds+')'
-         ):
-         (<></>
-         )}
-    {props.background=="drizzle" ? (
+    }
+    if(props.background=="drizzle") {
             document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+drizzle+')'
-             ):
-             (<></>
-             )}   
-    {props.background=="rain" ? (
+    } 
+    if(props.background=="rain") {
                 document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+rain+')'
-                 ):
-                 (<></>
-                 )}
-    {props.background=="snow" ? (
+    }
+    if(props.background=="snow"){
                     document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+snow+')'
-                     ):
-                     (<></>
-                     )}  
-    {props.background=="thunderstorm" ? (
+    }
+    if(props.background=="thunderstorm"){ 
                         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+thunderstorm+')'
-                         ):
-                         (<></>
-                         )}
+                      }
+    
         return(
        
         <div className="container text-light">

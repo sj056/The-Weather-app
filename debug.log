@@ -1,3 +1,0 @@
-[1015/205516.018:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\08657598-75c7-4461-8ad3-58605783ff1f: The system cannot find the path specified. (0x3)
-[1015/205516.166:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\DELL\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\8c8bc249-4fea-4c75-a605-2520ac2d9b9d: The system cannot find the path specified. (0x3)
-[1015/205516.166:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

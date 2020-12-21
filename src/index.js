@@ -10,5 +10,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-const REACT_APP_API_KEY=cbcdd0541b10be68e1b95edca9109ef
-serviceWorker.unregister();
+serviceWorker.register();

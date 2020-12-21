@@ -10,6 +10,13 @@ form input[name="country"]{
     border-bottom: 2px solid whitesmoke;
     border-radius: 0;
 }
+.date{
+    color:whitesmoke;
+    font-size:5px ;
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    
+}
 form input:focus{
     background-color: transparent !important;
     box-shadow: none !important;

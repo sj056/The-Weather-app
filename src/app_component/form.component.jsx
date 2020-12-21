@@ -3,7 +3,8 @@ import"./form.style.css";
 const Form= (props)=>{
     return(
         <div className="container">
-            <div className="display-4 text-light" id="title">mosam☁️</div>
+            <div className="display-4 text-light" id="title">The Weather App</div>
+            <div className="date"><h5>{props.date}</h5></div>
             <div>{props.error?error():null}</div>
             <form onSubmit={props.loadmosam}>
             <div className="row">
@@ -13,7 +14,7 @@ const Form= (props)=>{
                 <div className="col-md-3">
                     <input type="text" className="form-control" name="country" autoComplete="off" placeholder="country"/>
                 </div>
-                <div className="col-md-3 mt-md-0 text-md-left">
+                <div className="col-md-3 mt-md-0 text-md-left mt-2">
                    <button className="btn btn-light">Get Weather</button> 
                 </div>
             </div>

@@ -6,8 +6,8 @@ import"weather-icons/css/weather-icons.css";
 import"bootstrap/dist/css/bootstrap.min.css";
 import Mosam from"./app_component/mosam.component";
 import Form from"./app_component/form.component";
-const API_key="cbcdd0541b10be68e1b95edca9109ef0";
-
+require('dotenv').config();
+const API_KEY = process.env.REACT_APP_API_KEY;
 class App extends React.Component{
   constructor(){
     super();
@@ -20,9 +20,9 @@ class App extends React.Component{
       temp_max:undefined,
       temp_min:undefined,
       desc:"",
-      error:false
-    };
-
+      error:false,   
+     };
+     
     this.icon={
       Thunderstorm:"wi-thunderstorm",
       Drizzle:"wi-sleet",
@@ -32,6 +32,7 @@ class App extends React.Component{
       Clear:"wi-day-sunny",
       Clouds:"wi-day-fog"
     }
+    
   }
   
   calcelsius(temp)
@@ -40,15 +41,14 @@ class App extends React.Component{
     return cel;
   }
 
-  get_weathericon(icons,rangeid){
+  get_weathericon(icon,rangeid){
     switch(true){
       case rangeid>=200&&rangeid<=232:
         this.setState({icon:this.icon.Thunderstorm});
-       
         break;
       case rangeid>=300&&rangeid<=321:
         this.setState({icon:this.icon.Drizzle});
-        break;
+       break;
       case rangeid>=500&&rangeid<=531:
         this.setState({icon:this.icon.Rain});
         break;
@@ -65,7 +65,8 @@ class App extends React.Component{
         this.setState({icon:this.icon.Clouds});
         break;
       default:
-        this.setState({icon:this.icon.Clouds});            
+        this.setState({icon:this.icon.Clouds});
+
     }
   }
   getweather=async(e)=>{
@@ -74,31 +75,39 @@ class App extends React.Component{
     const country=e.target.elements.country.value;
     if(city&&country)
     {
-    const api_call=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_key}`);
-
+    const api_call=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}`);
     const response=await api_call.json();
-    console.log(response);
     this.setState({
     city:`${response.name},${response.sys.country}`,
     celsius:this.calcelsius(response.main.temp),
     temp_max:this.calcelsius(response.main.temp_max),
     temp_min:this.calcelsius(response.main.temp_min),
     desc:response.weather[0].description,
-});
-     this.get_weathericon(this.icon,response.weather[0].id)
+    
+    });  
+    this.get_weathericon(this.icon,response.weather[0].id)
   }
   else{
     this.setState({error:true});
   }
 };
 
-  render(){
+ 
+   dateBuilder(d){
+  let months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let date=d.getDate();
+  let month=months[d.getMonth()];
+  let year=d.getFullYear();
+  return `${date} ${month} ${year}`
+}
+render()
+ {
     return(
     <div className="App">
-     <Form loadmosam={this.getweather} error={this.state.error}/>
+     <Form loadmosam={this.getweather} error={this.state.error} date={this.dateBuilder(new Date())}/>
      <Mosam city={this.state.city} country={this.state.country} temp_celsius={this.state.celsius} temp_max={this.state.temp_max} temp_min={this.state.temp_min} desc={this.state.desc}
-     icon={this.state.icon}/>
-    </div>
+     icon={this.state.icon} />
+     </div> 
     );
   }
 }

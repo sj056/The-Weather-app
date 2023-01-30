@@ -9,25 +9,25 @@ import thunderstorm from './background/thunderstorm.jpg';
 
 
 const Mosam =(props)=>{
-    if(props.background=="atmosphere"){
+    if(props.background==="atmosphere"){
         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+atmosphere+')'
     } 
-    if(props.background=="clear"){
+    if(props.background==="clear"){
         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clear+')'
     } 
-    if(props.background=="clouds"){
+    if(props.background==="clouds"){
         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+clouds+')'
     }
-    if(props.background=="drizzle") {
+    if(props.background==="drizzle") {
             document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+drizzle+')'
     } 
-    if(props.background=="rain") {
+    if(props.background==="rain") {
                 document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+rain+')'
     }
-    if(props.background=="snow"){
+    if(props.background==="snow"){
                     document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+snow+')'
     }
-    if(props.background=="thunderstorm"){ 
+    if(props.background==="thunderstorm"){ 
                         document.getElementById('Body').style.backgroundImage= 'linear-gradient(to  bottom , rgba(0, 0, 0, 0.4),rgba(0,0,0,0.75)),url('+thunderstorm+')'
                       }
     
@@ -36,14 +36,14 @@ const Mosam =(props)=>{
         <div className="container text-light">
             <div className="cards pt-4">
                 <h1 >
-                    <span className="px-2">{props.city}</span> 
+                    <span className="loc">{props.city}</span> 
                 </h1>
                 <h5 >
                     <i className={`wi ${props.icon} display-2`}/>
                 </h5>
-                <span className="px-2"> {props.temp_celsius?(<h1>{props.temp_celsius}&deg;c</h1>):null}</span>
+                <span > {props.temp_celsius?(<h1 className="currTemp">{props.temp_celsius}&deg;c</h1>):null}</span>
+                <h4 className="desc">{props.desc}</h4>
                 {minmaxTemp(props.temp_min,props.temp_max)}   
-                <h4 className="py-3">{props.desc}</h4>
                
             </div>
         </div>
